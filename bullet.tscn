@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bydylm41tlwdh"]
+
+[ext_resource type="Script" uid="uid://cq7mx88acf54y" path="res://bullet.gd" id="1_v7oki"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rtl8c"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Bullet" type="Area2D" parent="."]
+script = ExtResource("1_v7oki")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bullet"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet"]
+shape = SubResource("CircleShape2D_rtl8c")

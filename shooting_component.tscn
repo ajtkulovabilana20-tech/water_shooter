@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8ywqvtje8qf1"]
+
+[ext_resource type="Script" uid="uid://c2j3dwbsfmk4w" path="res://shooting_component.gd" id="1_purqo"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ShootingComponent" type="Node" parent="."]
+script = ExtResource("1_purqo")
+
+[node name="FireTimer" type="Timer" parent="ShootingComponent"]
+
+[connection signal="shot_failed" from="ShootingComponent" to="ShootingComponent" method="_on_shot_failed"]
+[connection signal="shot_fired" from="ShootingComponent" to="ShootingComponent" method="_on_shot_fired"]
